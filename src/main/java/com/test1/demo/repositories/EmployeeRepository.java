@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
     List<Employee> findAll();
-    Employee findById(long id);
+    Employee findByEmployeeId(Long id);
     Employee save(Employee employee);
 
 }

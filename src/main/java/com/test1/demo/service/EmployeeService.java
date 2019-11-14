@@ -25,12 +25,12 @@ public class EmployeeService {
         return employees;
     }
 
-    public Employee findById(long id){
-        return employeeRepository.findById(id);
+    public Employee findById(Long id){
+        return employeeRepository.findByEmployeeId(id);
     }
 
-    public Employee updateEmployee(Employee employee, long id){
-        Employee emp = employeeRepository.findById(id);
+    public Employee updateEmployee(Employee employee, Long id){
+        Employee emp = employeeRepository.findByEmployeeId(id);
         if (emp == null){
             throw new NullPointerException("The employee with id does not exist.");
         }

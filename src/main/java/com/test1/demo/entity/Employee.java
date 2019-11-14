@@ -15,7 +15,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long employeeId;
 
     @NotNull
     @Column(name = "first_name", length = 20)
@@ -77,7 +77,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "The customer with id "+ id + " named "+ firstName + lastName +
+        return "The customer with id "+ employeeId + " named "+ firstName + lastName +
                 "joined our company on "+ entryDate;
     }
 }
