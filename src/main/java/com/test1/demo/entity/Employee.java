@@ -1,11 +1,8 @@
 package com.test1.demo.entity;
 
-import javax.persistence.Table;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Column;
-import javax.persistence.GenerationType;
+import com.test1.demo.common.EmployeeType;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
 
@@ -18,21 +15,28 @@ public class Employee {
     private Long employeeId;
 
     @NotNull
-    @Column(name = "first_name", length = 20)
+    @Column(length = 20)
     private String firstName;
 
     @Column(name = "last_name", length = 20)
     private String lastName;
 
+    @NotNull
     @Column(length = 60)
     private String email;
 
-    @Column(name = "mobile", length = 20)
-    private String mobileNo;
+    @Column(length = 20)
+    private String mobile;
 
     @Column(name = "entry_date")
     private Date entryDate;
 
+    @Column(columnDefinition = "DECIMAL(10, 2)")
+    private Double annualSalary;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private EmployeeType employeeType;
 
 
     public String getFirstName() {
@@ -67,12 +71,28 @@ public class Employee {
         this.email = email;
     }
 
-    public String getMobileNo() {
-        return mobileNo;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
+    public void setMobileNo(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public Double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(Double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    public EmployeeType getEmployeeType() {
+        return employeeType;
+    }
+
+    public void setEmployeeType(EmployeeType employeeType) {
+        this.employeeType = employeeType;
     }
 
     @Override

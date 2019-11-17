@@ -3,7 +3,6 @@ package com.test1.demo.service;
 import com.test1.demo.entity.Employee;
 import com.test1.demo.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.test1.demo.common.Action;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +15,10 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public List<Employee> findAll(){
+    public List<Employee> findAllEmployee(){
         System.out.println("Getting all employees.");
         List<Employee> employees = new ArrayList<>();
-        for (Employee employee : employeeRepository.findAll()) {
-            employees.add(employee);
-        }
+        employeeRepository.findAll().forEach(employees::add);
         return employees;
     }
 

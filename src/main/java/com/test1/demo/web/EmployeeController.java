@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-//@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -19,7 +19,7 @@ public class EmployeeController {
 
     @GetMapping(value = "/all")
     public List<Employee> listEmployees(){
-        return employeeService.findAll();
+        return employeeService.findAllEmployee();
     }
 
     @GetMapping(value = "/{id}")
