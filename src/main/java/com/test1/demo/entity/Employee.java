@@ -28,6 +28,9 @@ public class Employee {
     @Column(length = 20)
     private String mobile;
 
+    //address need to be updated in table
+
+
     @Column(name = "entry_date")
     private Date entryDate;
 
@@ -38,6 +41,9 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private EmployeeType employeeType;
 
+    public Long getEmployeeId(){
+        return employeeId;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -75,7 +81,7 @@ public class Employee {
         return mobile;
     }
 
-    public void setMobileNo(String mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 
