@@ -29,6 +29,7 @@ public class Employee {
     private String mobile;
 
     //address need to be updated in table
+    private String address;
 
 
     @Column(name = "entry_date")
@@ -99,6 +100,14 @@ public class Employee {
 
     public void setEmployeeType(EmployeeType employeeType) {
         this.employeeType = employeeType;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override

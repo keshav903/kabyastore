@@ -4,9 +4,7 @@ import com.test1.demo.common.ApplianceType;
 import com.test1.demo.common.Brand;
 import com.test1.demo.common.Item;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -18,18 +16,22 @@ public class ItemDetails implements Item {
     private String itemId;
 
     @NotNull
-    @Column(columnDefinition = "VARCHAR(14)")
+    @Column(columnDefinition = "VARCHAR(80)")
+    private String name;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
     private ApplianceType applianceType;
 
     @NotNull
-    @Column(columnDefinition = "VARCHAR(14)")
+    @Enumerated(EnumType.STRING)
     private Brand brand;
-    private Long price;
+    private Double price;
 
     @Column(columnDefinition = "VARCHAR(50)")
     private String description;
 
-    private long quantity;
+    private Long quantity;
 
     @Override
     public String getItemId() {
@@ -59,12 +61,29 @@ public class ItemDetails implements Item {
     }
 
     @Override
-    public Long getPrice() {
-        return price;
+    public String getName() {
+        return name;
     }
 
-    public void setPrice(Long price) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Long quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public Double getPrice() {
+        return price;
     }
 
     public String getDescription() {
