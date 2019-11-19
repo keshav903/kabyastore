@@ -1,0 +1,30 @@
+
+<div class="content">
+  <div class="card-container">
+    <h1>{{ title }} online store is coming soon!</h1>
+    <p>Welcome to kabya Electronics. This site is under construction, we would like thank you for your patient.</p>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+           <div class="card.highlight-card">
+          <ul class="text-center list-inline py-3">
+            <li class="list-inline-item">
+              <a routerLink="/employee" class="btn btn-info">List Employees</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/addemployee" class="btn btn-info">Add Employee</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/itemdetail" class="btn btn-info">List of Items</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/addcustomer" class="btn btn-info">Add Customer</a>
+            </li>
+          </ul>
+         </div>
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
