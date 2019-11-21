@@ -10,13 +10,17 @@ import {EmployeeService} from './employee/employee.service';
 import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import { ItemListComponent } from './item/item-list/item-list.component';
 import {ItemdetailsService} from './item/itemdetails.service';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
     EmployeeAddComponent,
-    ItemListComponent
+    ItemListComponent,
+    HomeComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
