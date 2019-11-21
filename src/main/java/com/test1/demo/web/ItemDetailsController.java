@@ -3,6 +3,7 @@ package com.test1.demo.web;
 import com.test1.demo.common.Brand;
 import com.test1.demo.entity.ItemDetails;
 import com.test1.demo.service.ItemDetailsService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
