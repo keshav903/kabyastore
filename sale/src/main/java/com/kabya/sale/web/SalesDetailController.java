@@ -18,19 +18,18 @@ public class SalesDetailController {
     @Autowired
     private SalesDetailService salesDetailService;
 
-    @Autowired
-    private RestTemplate restTemplate;
+   @Autowired
+   private RestTemplate restTemplate;
 
+   @GetMapping("/all")
     public List<SalesDetail> getAllSalesItem() {
         return salesDetailService.getAllSalesItem();
     }
 
-    @GetMapping(value = "/{itemId}")
+    @GetMapping(value = "/item/{itemId}")
     public SalesItem getItemDetails(@PathVariable("itemId") String itemId) {
-        return restTemplate.getForObject("http://MAIN-SERVICE/itemdetail/" + itemId, SalesItem.class);
+        return restTemplate.getForObject("http://MAIN-SERVICE/itemdetail/item/" + itemId, SalesItem.class);
     }
 
-    public void print(){
-        System.out.println(this.getItemDetails("kjnk").getItemId());
-    }
+
 }

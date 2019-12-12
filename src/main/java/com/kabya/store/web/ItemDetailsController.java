@@ -21,7 +21,7 @@ public class ItemDetailsController {
         return itemDetailsService.findAll();
     }
 
-    @GetMapping(value = "/{itemId}")
+    @GetMapping(value = "/item/{itemId}")
     public ItemDetails getByItemId(@PathVariable("itemId") String itemId){
         return itemDetailsService.findById(itemId);
     }

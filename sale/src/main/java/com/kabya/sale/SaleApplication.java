@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class SaleApplication {
 
-    @Bean
+   @Bean
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }

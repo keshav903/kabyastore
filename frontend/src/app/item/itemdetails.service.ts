@@ -20,7 +20,7 @@ export class ItemdetailsService {
     return this.http.get<ItemDetail[]>(this.itemdetailUrl + '/' + name);
   }
   public findById( id: string) {
-    return this.http.get<ItemDetail>(this.itemdetailUrl + '/' + id);
+    return this.http.get<ItemDetail>(this.itemdetailUrl + '/item/' + id);
   }
   public findAllByNameAndBrand(name: string, brand: string) {
     return this.http.get<ItemDetail[]>(this.itemdetailUrl + '/' + name + '/brand/' + brand);
