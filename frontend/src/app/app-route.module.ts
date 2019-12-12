@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './employee/employee-list/employee-list.co
 import {EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import {ItemListComponent} from './item/item-list/item-list.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import {SalesComponent} from './sales/sales.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'employee', component: EmployeeListComponent },
   { path: 'addemployee', component: EmployeeAddComponent},
   { path: 'itemdetail', component: ItemListComponent},
+  { path: 'sales', component: SalesComponent},
   { path: '404', component: PagenotfoundComponent},
   { path: '**', redirectTo: '/404'}
 ];

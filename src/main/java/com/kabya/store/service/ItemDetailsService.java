@@ -6,7 +6,7 @@ package com.kabya.store.service;
  */
 
 import com.kabya.store.common.Brand;
-import com.kabya.store.repositories.ItemDetailsRepository;
+import com.kabya.store.repository.ItemDetailsRepository;
 import com.kabya.store.entity.ItemDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

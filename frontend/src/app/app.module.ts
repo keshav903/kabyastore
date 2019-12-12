@@ -10,6 +10,8 @@ import {EmployeeService} from './employee/employee.service';
 import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import { ItemListComponent } from './item/item-list/item-list.component';
 import {ItemdetailsService} from './item/itemdetails.service';
+import { SalesComponent} from './sales/sales.component';
+import { SalesService} from './sales/sales.service';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
@@ -20,7 +22,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     EmployeeAddComponent,
     ItemListComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [EmployeeService, ItemdetailsService],
+  providers: [EmployeeService, ItemdetailsService, SalesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

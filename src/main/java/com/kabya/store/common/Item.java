@@ -5,6 +5,6 @@ public interface Item {
     public String getName();
     public ApplianceType getApplianceType();
     public Brand getBrand();
-    public Double getPrice();
+    public float getPrice();
 
 }

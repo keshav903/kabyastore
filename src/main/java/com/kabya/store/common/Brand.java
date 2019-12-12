@@ -3,7 +3,7 @@ package com.kabya.store.common;
 public enum Brand {
     APPLE,
     BOSCH,
-    HITACHII,
+    HITACHI,
     LG,
     SONY,
     TATA,

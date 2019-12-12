@@ -2,7 +2,7 @@ package com.kabya.store.service;
 
 import com.kabya.store.common.Action;
 import com.kabya.store.entity.Employee;
-import com.kabya.store.repositories.EmployeeRepository;
+import com.kabya.store.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

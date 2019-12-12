@@ -1,4 +1,4 @@
-package com.kabya.store.repositories;
+package com.kabya.store.repository;
 
 import com.kabya.store.common.Brand;
 import com.kabya.store.common.ApplianceType;

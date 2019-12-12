@@ -1,4 +1,4 @@
-package com.kabya.store.repositories;
+package com.kabya.store.repository;
 
 import com.kabya.store.entity.UserRole;
 import org.springframework.data.repository.CrudRepository;

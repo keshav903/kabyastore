@@ -26,7 +26,7 @@ public class ItemDetails implements Item {
     @NotNull
     @Enumerated(EnumType.STRING)
     private Brand brand;
-    private Double price;
+    private float price;
 
     @Column(columnDefinition = "VARCHAR(50)")
     private String description;
@@ -69,7 +69,7 @@ public class ItemDetails implements Item {
         this.name = name;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
@@ -82,7 +82,7 @@ public class ItemDetails implements Item {
     }
 
     @Override
-    public Double getPrice() {
+    public float getPrice() {
         return price;
     }
 
