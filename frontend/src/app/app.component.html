@@ -1,29 +1,30 @@
+<!--
+<div class="container">
 
-<div class="content">
   <div class="card-container">
     <h1>{{ title }} online store is coming soon!</h1>
     <p>Welcome to kabya Electronics. This site is under construction, we would like thank you for your patient.</p>
     <div class="row">
       <div class="col-md-12">
-        <div class="card.highlight-card">
+         <div class="card.highlight-card">
           <ul class="text-center list-inline">
             <li class="list-inline-item">
-              <a routerLink="/home" class="btn btn-info">Home</a>
+              <a routerLink="/home" class="btn btn-info" routerLinkActive="active">Home</a>
             </li>
             <li class="list-inline-item">
-              <a routerLink="/employee" class="btn btn-info">List Employees</a>
+              <a routerLink="/employee" class="btn btn-info" routerLinkActive="active">List Employees</a>
             </li>
             <li class="list-inline-item">
-              <a routerLink="/addemployee" class="btn btn-info">Add Employee</a>
+              <a routerLink="/addemployee" class="btn btn-info" routerLinkActive="active">Add Employee</a>
             </li>
             <li class="list-inline-item">
               <a routerLink="/itemdetail" class="btn btn-info">List of Items</a>
             </li>
             <li class="list-inline-item">
-              <a routerLink="/sales" class="btn btn-info">Sales</a>
+              <a routerLink="/sales" class="btn btn-info" routerLinkActive="active">Sales</a>
             </li>
             <li class="list-inline-item">
-              <a routerLink="/addcustomer" class="btn btn-info">Add Customer</a>
+              <a routerLink="/addcustomer" class="btn btn-info" routerLinkActive="active">Add Customer</a>
             </li>
           </ul>
         </div>
@@ -32,3 +33,8 @@
     </div>
   </div>
 </div>
+-->
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+

@@ -6,11 +6,11 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
     <changeSet author="keshav"
-           id="add-column-image">
+           id="add-column-image-url">
       <addColumn
                schemaName="public"
                tableName="item_details">
-        <column name="image" type="varchar(155)"/>
+        <column name="image_url" type="varchar(155)"/>
     </addColumn>
    </changeSet>
 </databaseChangeLog>
