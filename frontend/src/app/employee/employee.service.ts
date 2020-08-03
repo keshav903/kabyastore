@@ -10,10 +10,9 @@ export class EmployeeService {
   private employeeUrl: string;
 
   constructor(private http: HttpClient) {
-    this.employeeUrl = 'http://localhost:8080/employee';
+      this.employeeUrl = 'http://localhost:8083/employee';
   }
-
-  public findAll(): Observable<Employee[]> {
+  public findAll(){
     return this.http.get<Employee[]>(this.employeeUrl);
   }
   public findEmployee(id: number) {

@@ -11,7 +11,7 @@ export class ItemdetailsService {
   private itemdetailUrl: string;
 
   constructor(private http: HttpClient) {
-    this.itemdetailUrl = 'http://localhost:8080/itemdetail';
+    this.itemdetailUrl = 'http://localhost:8083/itemdetail';
   }
   public findAll() {
     return this.http.get<ItemDetail[]>( this.itemdetailUrl + '/all');
