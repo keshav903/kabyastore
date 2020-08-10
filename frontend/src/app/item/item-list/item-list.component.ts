@@ -9,13 +9,21 @@ import { ItemdetailsService } from '../itemdetails.service';
 })
 export class ItemListComponent implements OnInit {
   private itemdetail: ItemDetail[];
+  public message;
+  public errorMessage;
+  //public data = [{'key': 1, 'value': this.getValue(1)},];
 
   constructor( private itemdetailService: ItemdetailsService ) { }
 
   ngOnInit() {
-    this.itemdetailService.findAll().subscribe( data => {
-      this.itemdetail = data;
-    });
+    this.itemdetailService.findAll().subscribe(
+     data =>this.itemdetail = data,
+     error => this.errorMessage = error);
   }
+  getMessage() {
+    this.itemdetailService.getMessage().subscribe(
+      data => this.message = data,
+      error => this.errorMessage = error );
+  };
 
 }

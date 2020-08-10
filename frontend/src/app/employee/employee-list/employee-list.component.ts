@@ -9,6 +9,8 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeListComponent implements OnInit {
   employees: Employee[];
+  public showDetail: boolean = true;
+  public currentEmployee: Employee;
 
   constructor(private employeeService: EmployeeService) { }
 
@@ -16,6 +18,10 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService.findAll().subscribe(data => {
       this.employees = data;
     });
+  }
+  setCurrentEmployee(employee : Employee) {
+        this.showDetail = false;
+        this.currentEmployee = employee;
   }
 
 }

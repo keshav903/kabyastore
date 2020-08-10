@@ -2,7 +2,7 @@
 <div class="container">
   <h2>Our Teams</h2>
   <p>We have a dedicated team which is working hard to get our ambitious plan.</p>
-  <table class="table table-striped">
+  <table class="table table-striped" *ngIf = "showDetail; else elseBlock">
       <thead class="grey">
       <tr>
         <th scope="col">Employee Id</th>
@@ -13,7 +13,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let employee of employees">
+      <tr *ngFor="let employee of employees" (click)="setCurrentEmployee(employee)">
         <td>{{ employee.employeeId }}</td>
         <td>{{ employee.firstName }}</td>
         <td>{{ employee.lastName }}</td>
@@ -22,4 +22,22 @@
       </tr>
       </tbody>
     </table>
+  <ng-template #elseBlock>
+    <div class="row"><button class="btn btn-primary" (click) ="showDetail=true" >Go to employee list</button></div>
+   <div class="row">
+    <div class="col-md-2">
+      <h2>Hello how are you?</h2>
+    </div>
+    <div class="col-md-2">
+      <h3>{{currentEmployee.firstName}}</h3>
+    </div>
+    <div class="col-md-2">
+      {{currentEmployee.lastName}}
+    </div>
+    <div class="col-md-2">
+      {{currentEmployee.email}}
+    </div>
+
+  </div>
+  </ng-template>
 </div>
