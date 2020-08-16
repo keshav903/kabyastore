@@ -91,3 +91,6 @@ footer a {
   display: flex;
   align-items: center;
 }
+.li .selected {
+   color: 'brown';
+}

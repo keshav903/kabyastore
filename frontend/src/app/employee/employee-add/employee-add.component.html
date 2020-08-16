@@ -1,6 +1,6 @@
 
 <div class="container">
-    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+    <form (ngSubmit)="addEmployee()" #employeeForm="ngForm">
       <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" [(ngModel)]="employee.firstName"
@@ -54,6 +54,13 @@
         name="mobile"
         placeholder="Enter mobile number"
         #mobile="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="mobile">Employee Type</label>
+        <select name="_employeeType" class="form-control"
+           [(ngModel)] = "_employeeType">
+          <option *ngFor = "let option of options" >{{option}}</option>
+        </select>
       </div>
       <button type="submit" [disabled]="!employeeForm.form.valid"
               class="btn btn-info">Submit</button>

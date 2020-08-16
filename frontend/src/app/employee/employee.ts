@@ -7,6 +7,11 @@ export class Employee {
   address: string;
   entryDate: Date;
   annualSalary: number;
-  employeeType: string;
+  employeeType: EmployeeType;
+}
+export enum EmployeeType {
+    FULLTIME,
+    PARTTIME,
+    CONTRACT
 }
 

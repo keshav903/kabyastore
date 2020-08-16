@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemDisplayComponent } from './component/item-display/item-display.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

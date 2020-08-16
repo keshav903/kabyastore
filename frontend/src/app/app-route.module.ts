@@ -8,11 +8,13 @@ import {ItemListComponent} from './item/item-list/item-list.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {SalesComponent} from './sales/sales.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: 'home', component: HomeComponent},
   { path: 'employee', component: EmployeeListComponent },
+  { path: 'employee/:id', component: EmployeeDetailComponent },
   { path: 'addemployee', component: EmployeeAddComponent},
   { path: 'itemdetail', component: ItemListComponent},
   { path: 'sales', component: SalesComponent},
@@ -31,4 +33,5 @@ const routes: Routes = [
 })
 export class AppRouteModule { }
 export const routingComponent = [HomeComponent, EmployeeListComponent , EmployeeAddComponent,
-                            ItemListComponent, SalesComponent, ContactComponent, PagenotfoundComponent];
+                            ItemListComponent, SalesComponent, ContactComponent,EmployeeDetailComponent,
+                             PagenotfoundComponent];
