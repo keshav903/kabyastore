@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
 import {EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import {ItemListComponent} from './item/item-list/item-list.component';
+import { ItemDisplayComponent } from './component/item-display/item-display.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {SalesComponent} from './sales/sales.component';
 import { ContactComponent } from './component/contact/contact.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: '404', component: PagenotfoundComponent},
   { path: '**', redirectTo: '/404'}
 ];
-
+//
 @NgModule({
   declarations: [],
   imports: [
@@ -33,5 +34,5 @@ const routes: Routes = [
 })
 export class AppRouteModule { }
 export const routingComponent = [HomeComponent, EmployeeListComponent , EmployeeAddComponent,
-                            ItemListComponent, SalesComponent, ContactComponent,EmployeeDetailComponent,
+                            ItemListComponent,  ItemDisplayComponent, SalesComponent, ContactComponent,EmployeeDetailComponent,
                              PagenotfoundComponent];

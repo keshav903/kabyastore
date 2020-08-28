@@ -26,7 +26,7 @@ export class EmployeeListComponent implements OnInit {
     });
   }
  showDetails(employee) {
-   // let selectedId = this.employeeId;
+    //let selectedId = this.employeeId;
    //this.router.navigate(['/employee.employeeId'], employee.employeeId)
     this.router.navigate([employee.employeeId], {relativeTo: this.route});
   }

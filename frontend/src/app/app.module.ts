@@ -13,7 +13,7 @@ import { ItemdetailsService } from './item/itemdetails.service'
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ItemDisplayComponent } from './component/item-display/item-display.component';
+
 
 
 @NgModule({
@@ -21,8 +21,7 @@ import { ItemDisplayComponent } from './component/item-display/item-display.comp
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    routingComponent,
-    ItemDisplayComponent
+    routingComponent
   ],
   imports: [
     BrowserModule,
