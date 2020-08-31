@@ -19,7 +19,7 @@ export class EmployeeService {
     return this.http.get<Employee>(this.employeeUrl + '/' + id);
   }
   public findMaxEmployeeId(){
-      return this.http.get<number>(this.employeeUrl + '/maxId', {responseType: 'text'});
+      return this.http.get<number>(this.employeeUrl + '/maxId');
     }
   public save(employee: Employee) {
     return this.http.post<Employee>(this.employeeUrl, employee);

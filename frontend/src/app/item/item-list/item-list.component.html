@@ -1,10 +1,9 @@
 <div class="container">
   <h2>List of Products</h2>
-  {{errorMessage}}
   <p>Decorating your office to boil the water for a tea with your beloved in the fascinating
    light we have every electronics appliance to make your moment happy and easier.</p>
   <button (click) = "getMessage()" class="btn btn-primary">Get message</button>
-  <p>The message is: {{message}}</p>
+  <p *ngIf="message">The message is: {{message}}</p>
   <table class="table table-striped">
     <thead>
     <tr>

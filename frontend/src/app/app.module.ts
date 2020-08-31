@@ -10,11 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {EmployeeService} from './employee/employee.service';
 import { SalesService} from './sales/sales.service';
 import { ItemdetailsService } from './item/itemdetails.service'
-
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
-
 
 @NgModule({
   declarations: [

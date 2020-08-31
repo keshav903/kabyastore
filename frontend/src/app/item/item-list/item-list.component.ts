@@ -11,7 +11,6 @@ export class ItemListComponent implements OnInit {
   private itemdetail: ItemDetail[];
   public message;
   public errorMessage;
-  //public data = [{'key': 1, 'value': this.getValue(1)},];
 
   constructor( private itemdetailService: ItemdetailsService ) { }
 

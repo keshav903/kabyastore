@@ -8,8 +8,9 @@ import {ItemListComponent} from './item/item-list/item-list.component';
 import { ItemDisplayComponent } from './component/item-display/item-display.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {SalesComponent} from './sales/sales.component';
-import { ContactComponent } from './component/contact/contact.component';
 import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
+import { ContactComponent} from './component/contact/contact.component'
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -30,6 +31,7 @@ const routes: Routes = [
    // CommonModule,
     RouterModule.forRoot(routes)
    ],
+
   exports: [RouterModule]
 })
 export class AppRouteModule { }
