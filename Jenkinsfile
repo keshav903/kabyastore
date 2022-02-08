@@ -13,6 +13,7 @@ pipeline {
       steps {
         sh 'script/code_scan.sh'
       }
+      }
     }
 
     stages {
