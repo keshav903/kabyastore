@@ -5,6 +5,15 @@ pipeline {
         maven "MAVEN"
         jdk "JDK"
     }
+    
+    environment {
+       PATH = "C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\bin;${env.PATH}"
+      stages {
+      stage('Sanity check') {
+      steps {
+        sh 'script/code_scan.sh'
+      }
+    }
 
     stages {
         stage('Initialize'){
