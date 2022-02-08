@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("C:/Users/kgaire/AppData/Local/Jenkins/.jenkins/workspace") {
+                dir("C:/Users/kgaire/AppData/Local/Jenkins/.jenkins/workspace/") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             
@@ -26,7 +26,7 @@ pipeline {
        always {
           junit(
         allowEmptyResults: true,
-        testResults: '*/test-reports/.xml'
+        testResults: 'C:/Users/kgaire/Desktop/test-report/testReport.txt'
       )
       }
    } 
