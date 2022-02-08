@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/testpipeline1/kabyastore/") {
+                dir("C:/Users/kgaire/AppData/Local/Jenkins/.jenkins/workspace/testpipeline1") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             
